@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   SADIA'S MOBILE - COLOR VARIABLES
+======================================== */
+
+:root {
+  --primary: #101B24;
+  --secondary: #36B6A0;
+  --surface: #202E38;
+  --foreground: #E6EDF2;
+
+  --muted: #8FA3AF;
+  --border: #33434E;
+  --hover: #2DA58F;
+}
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary);
+  color: var(--foreground);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Inputs */
+
+input,
+textarea,
+select {
+  font-family: 'Roboto', sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #71838E;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+/* ========================================
+   CUSTOM SHADOWS
+======================================== */
+
+.shadow-custom {
+  box-shadow: 0px 8px 24px #00000030;
+}
+
+.shadow-primary {
+  box-shadow: 0px 8px 24px #36B6A020;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  background: #101B24;
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #36B6A080;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #36B6A0;
+}
+
+::-webkit-scrollbar-track {
+  background: #202E38;
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #36B6A0 #202E38;
+}
+
+/* ========================================
+   CUSTOM SLIDER - SLICK
+======================================== */
+
+.slick-slider .slick-arrow {
+  height: 50px;
+  width: 50px;
+  background-color: #202E38;
+  z-index: 5;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.slick-slider .slick-arrow:hover {
+  background-color: #36B6A0;
+}
+
+.slick-slider .slick-arrow::before {
+  color: #E6EDF2;
+  font-size: 35px;
+  font-weight: 700;
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+.slick-slider .slick-next {
+  right: -12px;
+}
+
+.slick-slider .slick-prev {
+  left: -12px;
+}
+
+.slick-dots {
+  bottom: 7px;
+}
+
+.slick-dots li {
+  background-color: #36B6A055;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  transition: all 0.3s ease;
+}
+
+.slick-dots button::before {
+  content: "";
+  display: none;
+}
+
+.slick-dots .slick-active {
+  background: #36B6A0;
+  height: 16px;
+  width: 16px;
+}
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection {
+  background: #36B6A0;
+  color: #101B24;
+}
+
+/* ========================================
+   FOCUS
+======================================== */
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #36B6A0;
+}
+
+/* ========================================
+   FONT UTILITIES
+======================================== */
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-nunito-sans {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ========================================
+   BRAND UTILITIES
+======================================== */
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-surface {
+  background-color: var(--surface);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.border-brand {
+  border-color: var(--border);
+}
