@@ -315,19 +315,17 @@ export default function Sidebar ({ hideBar = false }) {
                 to={item.path}
                 end={isHome}
                 className={({ isActive }) => `
-                  flex flex-col items-center justify-center
-                  gap-1 w-14 py-1 rounded-xl transition-all
-                  ${isActive && !isHome ? 'text-[#36B6A0]' : 'text-[#8FA3AF]'}
-                  ${
-                    isHome
-                      ? `-mt-7 w-[58px] h-[58px] rounded-2xl border-4 border-[#101B24] shadow-lg ${
-                          isActive
-                            ? 'bg-[#36B6A0] text-[#101B24]'
-                            : 'bg-[#202E38] text-[#36B6A0]'
-                        }`
-                      : ''
-                  }
-                `}
+    flex flex-col items-center justify-center
+    gap-1 w-14 py-1 rounded-xl transition-all
+    ${isActive && !isHome ? 'text-[#36B6A0]' : 'text-[#8FA3AF]'}
+    ${
+      isHome
+        ? `-mt-7 w-[58px] h-[58px] rounded-2xl border-4 border-[#101B24] shadow-lg ${
+            isActive ? 'bg-[#36B6A0] text-white' : 'bg-[#202E38] text-[#36B6A0]'
+          }`
+        : ''
+    }
+  `}
               >
                 <Icon size={isHome ? 23 : 19} />
                 <span className='text-[10px] font-semibold'>{item.name}</span>

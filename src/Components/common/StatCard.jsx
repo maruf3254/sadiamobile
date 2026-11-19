@@ -42,8 +42,8 @@ export default function StatCard ({
   return (
     <div
       className={`bg-[#202E38] border border-[#34434D] ${styles.border}
-      rounded-2xl p-5 transition-all duration-200
-      hover:-translate-y-1 shadow-lg shadow-black/10`}
+  rounded-2xl p-4 sm:p-5 transition-all duration-200
+  hover:-translate-y-1 shadow-lg shadow-black/10`}
     >
       <div className='flex items-start justify-between gap-3'>
         <div className='min-w-0'>

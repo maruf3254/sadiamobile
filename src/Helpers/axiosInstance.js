@@ -1,8 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
 
 const BASE_URL = import.meta.env.VITE_REACT_APP_API_URL;
 
 export const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    withCredentials: true
-})
+    withCredentials: true,
+});
+
+axiosInstance.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem("token");
+        if (token) {
+            config.headers = config.headers || {};
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => Promise.reject(error)
+);
