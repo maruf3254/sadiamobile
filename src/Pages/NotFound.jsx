@@ -14,7 +14,7 @@ function NotFound () {
           </h1>
 
           <div className='absolute rotate-12 rounded bg-red-500 px-3 py-1 text-sm text-white dark:bg-black'>
-            Page Not Found
+            Page Not Founddddd
           </div>
 
           <p className='mt-5 text-center text-sm text-gray-500 dark:text-gray-400'>
